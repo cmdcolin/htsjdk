@@ -1,0 +1,5 @@
+*.dic
+*.vcf
+*.sam
+*.gff3
+large.txt
