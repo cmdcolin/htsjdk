@@ -156,7 +156,7 @@ public class ParsingUtils {
     }
 
     /**
-     * join an array of strings given a seperator
+     * join an array of strings given a separator
      *
      * @param separator the string to insert between each array element
      * @param strings   the array of strings

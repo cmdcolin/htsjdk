@@ -88,7 +88,7 @@ public class TribbleIndexedFeatureReaderTest extends HtsjdkTest {
     }
 
     @Test(expectedExceptions = TribbleException.MalformedFeatureFile.class)
-    public void testPoolyFormatedIntervalListWithQuery() throws IOException {
+    public void testPoolyFormattedIntervalListWithQuery() throws IOException {
         final IntervalListCodec codec = new IntervalListCodec();
         final File testPath = new File(TestUtils.DATA_DIR, "interval_list/badExample.interval_list");
         try (final TribbleIndexedFeatureReader<Interval, LineIterator> featureReader =

@@ -1197,7 +1197,7 @@ public class VariantContext implements HtsRecord, Feature, Serializable {
 
     /**
      * Genotype-specific functions -- are the genotypes monomorphic w.r.t. to the alleles segregating at this
-     * site?  That is, is the number of alternate alleles among all fo the genotype == 0?
+     * site?  That is, is the number of alternate alleles among all of the genotype == 0?
      *
      * @return true if it's monomorphic
      */
@@ -1209,7 +1209,7 @@ public class VariantContext implements HtsRecord, Feature, Serializable {
 
     /**
      * Genotype-specific functions -- are the genotypes polymorphic w.r.t. to the alleles segregating at this
-     * site?  That is, is the number of alternate alleles among all fo the genotype &gt; 0?
+     * site?  That is, is the number of alternate alleles among all of the genotype &gt; 0?
      *
      * @return true if it's polymorphic
      */
@@ -1858,7 +1858,7 @@ public class VariantContext implements HtsRecord, Feature, Serializable {
 
     public int[] getGLIndicesOfAlternateAllele(Allele targetAllele) {
         final int index = getAlleleIndex(targetAllele);
-        if ( index == -1 ) throw new IllegalArgumentException("Allele " + targetAllele + " not in this VariantContex " + this);
+        if ( index == -1 ) throw new IllegalArgumentException("Allele " + targetAllele + " not in this VariantContext " + this);
         return GenotypeLikelihoods.getPLIndicesOfAlleles(0, index);
     }
 

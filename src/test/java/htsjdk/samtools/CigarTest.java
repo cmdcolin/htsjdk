@@ -155,10 +155,10 @@ public class CigarTest extends HtsjdkTest {
 
     @Test(dataProvider = "referenceLengthData")
     public void testGetReferenceLength(final String textCigar,
-            final int referenceLength, final int paddedReferenceLenght) throws Exception{
+            final int referenceLength, final int paddedReferenceLength) throws Exception{
         final Cigar cigar = TextCigarCodec.decode(textCigar);
         Assert.assertEquals(cigar.getReferenceLength(), referenceLength);
-        Assert.assertEquals(cigar.getPaddedReferenceLength(), paddedReferenceLenght);
+        Assert.assertEquals(cigar.getPaddedReferenceLength(), paddedReferenceLength);
     }
 
     @DataProvider

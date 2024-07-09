@@ -87,7 +87,7 @@ public class SRAIndex implements BrowseableBAMIndex {
 
     /**
      * @param header sam header
-     * @param recordRangeInfo info about record ranges withing SRA archive
+     * @param recordRangeInfo info about record ranges within SRA archive
      */
     public SRAIndex(SAMFileHeader header, SRAIterator.RecordRangeInfo recordRangeInfo) {
         this.header = header;

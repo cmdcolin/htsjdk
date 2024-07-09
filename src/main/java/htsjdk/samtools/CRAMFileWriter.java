@@ -150,7 +150,7 @@ public class CRAMFileWriter extends SAMFileWriterImpl {
         // the header must have been previously provided the container stream writer, so this
         // header is unused
         if (!header.equals(samFileHeader)) {
-            throw new IllegalArgumentException("Attempt to write a differetn file header than was previously provided");
+            throw new IllegalArgumentException("Attempt to write a different file header than was previously provided");
         }
         cramContainerStream.writeHeader();
     }

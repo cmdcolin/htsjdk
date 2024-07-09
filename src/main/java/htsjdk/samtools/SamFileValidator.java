@@ -480,7 +480,7 @@ public class SamFileValidator {
             addError(new SAMValidationError(
                     Type.RECORD_OUT_OF_ORDER,
                     String.format(
-                            "The record is out of [%s] order, prior read name [%s], prior coodinates [%d:%d]",
+                            "The record is out of [%s] order, prior read name [%s], prior coordinates [%d:%d]",
                             record.getHeader().getSortOrder().name(),
                             prev.getReadName(),
                             prev.getReferenceIndex(),

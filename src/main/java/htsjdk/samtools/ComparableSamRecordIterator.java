@@ -42,7 +42,7 @@ class ComparableSamRecordIterator extends PeekableIterator<SAMRecord> implements
      * to compare itself to other ComparableSamRecordIterators using the given comparator.
      *
      * @param iterator   the wrapped iterator.
-     * @param comparator the Comparator to use to provide ordering fo SAMRecords
+     * @param comparator the Comparator to use to provide ordering of SAMRecords
      */
     public ComparableSamRecordIterator(final SamReader sam, final CloseableIterator<SAMRecord> iterator, final Comparator<SAMRecord> comparator) {
         super(iterator);

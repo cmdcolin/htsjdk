@@ -131,7 +131,7 @@ public class SRAIterator implements SAMRecordIterator {
      * @param run opened read collection
      * @param header sam header
      * @param cachedReferences list of cached references shared among all iterators from a single SRAFileReader
-     * @param recordRangeInfo info about record ranges withing SRA archive
+     * @param recordRangeInfo info about record ranges within SRA archive
      * @param chunks used to determine which records the iterator should return
      */
     public SRAIterator(SRAAccession accession, final ReadCollection run, final SAMFileHeader header, ReferenceCache cachedReferences,
@@ -160,7 +160,7 @@ public class SRAIterator implements SAMRecordIterator {
      *  We walk though that list using chunksIterator. If current chunk can represent aligned fragments then we create
      *  SRAAlignmentIterator iterator, pass the chunk into it and ask if it can find any record. If record was found,
      *  we say that we have next; otherwise we check if the chunk can represent unaligned fragments and then create
-     *  SRAUnalignmentIterator if so and do the same steps as with alignemnt iterator.
+     *  SRAUnalignmentIterator if so and do the same steps as with alignment iterator.
      *
      *  If record was not found in both SRAAlignmentIterator and SRAUnalignmentIterator (it is possible that reference
      *  range has no alignments or that reads range has all aligned fragment), we try the next chunk.

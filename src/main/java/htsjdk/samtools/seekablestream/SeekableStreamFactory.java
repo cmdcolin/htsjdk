@@ -126,7 +126,7 @@ public class SeekableStreamFactory{
         /**
          * The wrapper will only be applied to the stream if the stream is treated as a non file:// {@link Path}
          *
-         * This has a fall back to htsjdk's built in http and ftp providers if no FileSystemProvder is available for them
+         * This has a fall back to htsjdk's built in http and ftp providers if no FileSystemProvider is available for them
          *
          * @param path    an IOPath to be opened
          * @param wrapper a wrapper to apply to the stream allowing direct transformations on the byte stream to be applied

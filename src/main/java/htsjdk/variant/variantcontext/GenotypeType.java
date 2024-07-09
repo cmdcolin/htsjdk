@@ -40,7 +40,7 @@ public enum GenotypeType {
     HET,
     /** All alleles are non-reference */
     HOM_VAR,
-    /** There is no allele data availble for this sample (alleles.isEmpty) */
+    /** There is no allele data available for this sample (alleles.isEmpty) */
     UNAVAILABLE,
     /** Some chromosomes are NO_CALL and others are called */
     MIXED  // no-call and call in the same genotype

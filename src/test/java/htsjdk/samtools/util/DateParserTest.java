@@ -35,8 +35,8 @@ that you make:
      date changes were made. (We recommend you provide URIs to the location
      from which the code is derived).
 
-In addition, creators of derivitive works must include the full text of this
-NOTICE in a location viewable to users of the derivitive work.
+In addition, creators of derivative works must include the full text of this
+NOTICE in a location viewable to users of the derivative work.
 
 THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS
 MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT

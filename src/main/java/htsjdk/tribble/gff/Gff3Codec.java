@@ -131,7 +131,7 @@ public class Gff3Codec extends AbstractFeatureCodec<Gff3Feature, LineIterator> {
         }
 
         if (line.startsWith(ARTEMIS_FASTA_MARKER)) {
-            //backwards compatability with Artemis is built into gff3 spec
+            //backwards compatibility with Artemis is built into gff3 spec
             processDirective(Gff3Directive.FASTA_DIRECTIVE, null);
             return featuresToFlush.poll();
         }
@@ -190,7 +190,7 @@ public class Gff3Codec extends AbstractFeatureCodec<Gff3Feature, LineIterator> {
 
         validateFeature(thisFeature);
         if (depth == DecodeDepth.SHALLOW) {
-            //flush all features immediatly
+            //flush all features immediately
             prepareToFlushFeatures();
         }
         return featuresToFlush.poll();
@@ -236,7 +236,7 @@ public class Gff3Codec extends AbstractFeatureCodec<Gff3Feature, LineIterator> {
             final int phase = splitLine.get(GENOMIC_PHASE_INDEX).equals(Gff3Constants.UNDEFINED_FIELD_VALUE) ? -1 : Integer.parseInt(splitLine.get(GENOMIC_PHASE_INDEX));
             final Strand strand = Strand.decode(splitLine.get(GENOMIC_STRAND_INDEX));
             final Map<String, List<String>> attributes = parseAttributes(splitLine.get(EXTRA_FIELDS_INDEX));
-            /* remove attibutes matching 'filterOutAttribute' */
+            /* remove attributes matching 'filterOutAttribute' */
             attributes.keySet().removeIf(filterOutAttribute);
             return new Gff3BaseData(contig, source, type, start, end, score, strand, phase, attributes);
         } catch (final NumberFormatException ex ) {
@@ -492,7 +492,7 @@ public class Gff3Codec extends AbstractFeatureCodec<Gff3Feature, LineIterator> {
     }
 
     /**
-     * Enum for parsing directive lines.  If information in directive line needs to be parsed beyond specifying directive type, decode method should be overriden
+     * Enum for parsing directive lines.  If information in directive line needs to be parsed beyond specifying directive type, decode method should be overridden
      */
     public enum Gff3Directive {
 

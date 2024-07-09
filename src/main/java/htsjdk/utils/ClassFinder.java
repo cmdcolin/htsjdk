@@ -171,7 +171,7 @@ public class ClassFinder {
     /**
      * Checks an item to see if it is a class and is annotated with the specified
      * annotation.  If so, adds it to the set, otherwise ignores it.
-     * @param name the path equivelant to the package + class/item name
+     * @param name the path equivalent to the package + class/item name
      */
     protected void handleItem(final String name) {
         if (name.endsWith(".class")) {

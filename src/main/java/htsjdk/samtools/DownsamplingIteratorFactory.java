@@ -41,7 +41,7 @@ public class DownsamplingIteratorFactory {
             "memory that is proportional to the number of template names in the incoming stream of reads, and will thus require " +
             "large amounts of memory when running on large input files.";
 
-    public static final String CONSTANT_MEMORY_DESCRPTION =
+    public static final String CONSTANT_MEMORY_DESCRIPTION =
             "Downsamples a stream or file of SAMRecords using a hash-projection strategy such that it can run in constant memory. " +
             "The downsampling is stochastic, and therefore the actual retained proportion will vary around the requested proportion. Due " +
             "to working in fixed memory this strategy is good for large inputs, and due to the stochastic nature the accuracy of this strategy " +
@@ -58,7 +58,7 @@ public class DownsamplingIteratorFactory {
     /** Describes the available downsampling strategies. */
     public enum Strategy {
         HighAccuracy(HIGH_ACCURACY_DESCRIPTION),
-        ConstantMemory(CONSTANT_MEMORY_DESCRPTION),
+        ConstantMemory(CONSTANT_MEMORY_DESCRIPTION),
         Chained(CHAINED_DESCRIPTION);
 
         public final String description;

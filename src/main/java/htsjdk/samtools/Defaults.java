@@ -49,13 +49,13 @@ public class Defaults {
 
     /**
      * The extension to assume a sam file has when the actual file doesn't have an extension, useful
-     * for when outputing to /dev/stdout, for example.
+     * for when outputting to /dev/stdout, for example.
      */
     public static final String DEFAULT_SAM_EXTENSION;
 
     /**
      * The extension to assume a vcf has when the actual file doesn't have an extension, useful
-     * for when outputing to /dev/stdout, for example.
+     * for when outputting to /dev/stdout, for example.
      */
     public static final String DEFAULT_VCF_EXTENSION;
 

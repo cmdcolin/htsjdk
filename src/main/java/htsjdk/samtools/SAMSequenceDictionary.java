@@ -205,7 +205,7 @@ public class SAMSequenceDictionary implements HtsHeader, Serializable {
 
     /**
      * Add an alias to a SAMSequenceRecord. This can be use to provide some
-     * alternate names fo a given contig. e.g:
+     * alternate names of a given contig. e.g:
      * <code>1,chr1,chr01,01,CM000663,NC_000001.10</code> e.g:
      * <code>MT,chrM</code>
      *
@@ -240,7 +240,7 @@ public class SAMSequenceDictionary implements HtsHeader, Serializable {
      * Add an alternative sequence name (AN tag) to a SAMSequenceRecord, including it into the aliases
      * to retrieve the contigs (as with {@link #addSequenceAlias(String, String)}.
      *
-     * <p>This can be use to provide some alternate names fo a given contig. e.g:
+     * <p>This can be use to provide some alternate names of a given contig. e.g:
      * <code>1,chr1,chr01,01,CM000663</code> or
      * <code>MT,chrM</code>.
      *

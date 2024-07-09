@@ -63,17 +63,17 @@ public class BAMEncoderOptionsTest extends HtsjdkTest {
         final int TEST_COMPRESSION_LEVEL = 2;
 
         final BAMEncoderOptions bamEncoderOptions = new BAMEncoderOptions();
-        final int defaultCompresionLevel = bamEncoderOptions.getCompressionLevel();
-        Assert.assertEquals(defaultCompresionLevel, DEFAULT_COMPRESSION_LEVEL);
+        final int defaultCompressionLevel = bamEncoderOptions.getCompressionLevel();
+        Assert.assertEquals(defaultCompressionLevel, DEFAULT_COMPRESSION_LEVEL);
 
-        Assert.assertNotEquals(defaultCompresionLevel, TEST_COMPRESSION_LEVEL);
+        Assert.assertNotEquals(defaultCompressionLevel, TEST_COMPRESSION_LEVEL);
         bamEncoderOptions.setOutputBufferSize(TEST_COMPRESSION_LEVEL);
         Assert.assertEquals(bamEncoderOptions.getOutputBufferSize(), TEST_COMPRESSION_LEVEL);
     }
 
     @Test
     public void testMaxRecordInRam() {
-        final int DEFAULT_MAX_RECORDS_IN_RAM = BAMEncoderOptions.DEAFULT_MAX_RECORDS_IN_RAM;
+        final int DEFAULT_MAX_RECORDS_IN_RAM = BAMEncoderOptions.DEFAULT_MAX_RECORDS_IN_RAM;
         final int TEST_RECORDS_IN_RAM = 2;
 
         final BAMEncoderOptions bamEncoderOptions = new BAMEncoderOptions();

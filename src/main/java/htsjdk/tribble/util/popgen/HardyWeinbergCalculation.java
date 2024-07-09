@@ -37,7 +37,7 @@ package htsjdk.tribble.util.popgen;
 
 /**
 * This class calculates a HardyWeinberg p-value given three values representing
-* the observed frequences of homozygous and heterozygous genotypes in the
+* the observed frequencies of homozygous and heterozygous genotypes in the
 * test population.
 *
 * @author Bob Handsaker

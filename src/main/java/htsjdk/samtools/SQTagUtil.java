@@ -74,7 +74,7 @@ public class SQTagUtil {
     }
 
     /**
-     * Compress a base and a log probabiliy difference (-10log10(p3/p2)) into
+     * Compress a base and a log probability difference (-10log10(p3/p2)) into
      * a single byte so that it can be output in a SAMRecord's SQ field.
      *
      * @param base  the 2nd-best base.
@@ -87,7 +87,7 @@ public class SQTagUtil {
     }
 
     /**
-     * Compress a base and a log probabiliy difference (-10log10(p3/p2)) into
+     * Compress a base and a log probability difference (-10log10(p3/p2)) into
      * a single byte so that it can be output in a SAMRecord's SQ field.
      *
      * @param base  the 2nd-best base (A=0, C=1, G=2, T=3).

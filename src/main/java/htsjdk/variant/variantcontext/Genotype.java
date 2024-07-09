@@ -611,7 +611,7 @@ public abstract class Genotype implements Comparable<Genotype>, Serializable {
      * @param c the map
      * @param <T> the key type
      * @param <V> the value type
-     * @return a sting, enclosed in {}, with comma seperated key value pairs in order of the keys
+     * @return a sting, enclosed in {}, with comma separated key value pairs in order of the keys
      */
     protected static <T extends Comparable<T>, V> String sortedString(Map<T, V> c) {
 

@@ -546,7 +546,7 @@ public class SamFileHeaderMerger {
             final SAMSequenceDictionary currentSequences = header.getSequenceDictionary();
             sequences = mergeSequences(sequences, currentSequences);
         }
-        // second pass, make a map of the original seqeunce id -> new sequence id
+        // second pass, make a map of the original sequence id -> new sequence id
         createSequenceMapping(headers, sequences);
         return sequences;
     }

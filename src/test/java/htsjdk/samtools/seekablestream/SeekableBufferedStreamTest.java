@@ -209,7 +209,7 @@ public class SeekableBufferedStreamTest extends HtsjdkTest {
 
 
     @Test
-    public void testDivisableReads()throws IOException{
+    public void testDivisibleReads()throws IOException{
 
         testReadsLength(1);
         testReadsLength(2);

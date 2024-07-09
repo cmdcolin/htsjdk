@@ -331,7 +331,7 @@ public abstract class AbstractBAMFileIndex implements BAMIndex {
     }
 
     /**
-     * The maxiumum bin number for a reference sequence of a given length
+     * The maximum bin number for a reference sequence of a given length
      */
     static int getMaxBinNumberForSequenceLength(final int sequenceLength) {
         return getFirstBinInLevel(getNumIndexLevels() - 1) + (sequenceLength >> 14);

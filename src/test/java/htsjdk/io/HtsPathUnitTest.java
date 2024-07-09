@@ -693,7 +693,7 @@ public class HtsPathUnitTest extends HtsjdkTest {
 
                 // This is the primary use case, to detect unencoded uris that were intended to be encoded.
                 // Note that assertNoProblematicScheme doesn't check for issues constructing the URI itself
-                // it is only called after a URI parsing exception has already occured.
+                // it is only called after a URI parsing exception has already occurred.
                 {"http://forgot.com/to encode"},
                 {"ftp://server.com/file name.txt"},
 

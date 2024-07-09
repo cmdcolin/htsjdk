@@ -68,7 +68,7 @@ public class SequenceUtilTest extends HtsjdkTest {
     }
 
     @Test(dataProvider = "compatibleNonEqualLists", expectedExceptions = SequenceUtil.SequenceListsDifferException.class)
-    public void testinCompatible(SAMSequenceDictionary sd1, SAMSequenceDictionary sd2) {
+    public void testingCompatible(SAMSequenceDictionary sd1, SAMSequenceDictionary sd2) {
         SequenceUtil.assertSequenceDictionariesEqual(sd1, sd2, false);
     }
 

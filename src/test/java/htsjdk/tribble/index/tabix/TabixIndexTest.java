@@ -116,7 +116,7 @@ public class TabixIndexTest extends HtsjdkTest {
                 .write(plainTextVcfIndexFile); // write it
 
         //TODO: you can pass in a .tbi file as the index for a plain .vcf, but if you *don't* pass in the file name and
-        //just require an index, VCFFleREader will only look for a .idx on a plain vcf
+        //just require an index, VCFFileREader will only look for a .idx on a plain vcf
         final VCFFileReader plainTextVcfReader = new VCFFileReader(plainTextVcfInputFile, plainTextVcfIndexFile);
         // Now we have both plaintext and compressed VCFs with provided TabixIndex-es and could test their "queryability"
 

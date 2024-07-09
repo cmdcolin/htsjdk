@@ -104,7 +104,7 @@ public class BlockCompressedOutputStream
     // but in practice that doesn't work.
     // The motivation for deflating at NO_COMPRESSION level is that it will predictably produce compressed
     // output that is 10 bytes larger than the input, and the threshold at which a block is generated is such that
-    // the size of tbe final gzip block will always be <= 64K.  This is preferred over the previous method,
+    // the size of the final gzip block will always be <= 64K.  This is preferred over the previous method,
     // which would attempt to compress up to 64K bytes, and if the resulting compressed block was too large,
     // try compressing fewer input bytes (aka "downshifting').  The problem with downshifting is that
     // getFilePointer might return an inaccurate value.

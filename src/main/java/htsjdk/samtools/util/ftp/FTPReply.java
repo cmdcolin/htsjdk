@@ -84,7 +84,7 @@ public class FTPReply {
      * successful completion of a command.
      * <p/>
      *
-     * @return True if a reply code is a postive completion response, false
+     * @return True if a reply code is a positive completion response, false
      *         if not.
      *         *
      */
@@ -103,7 +103,7 @@ public class FTPReply {
      * ready for the PASS command.
      * <p/>
      *
-     * @return True if a reply code is a postive intermediate response, false
+     * @return True if a reply code is a positive intermediate response, false
      *         if not.
      *         *
      */

@@ -50,7 +50,7 @@ public final class GenotypeLikelihoods {
     //
     // There are two objects here because we are lazy in creating both representations
     // for this object: a vector of log10 Probs and the PL phred-scaled string.  Supports
-    // having one set during initializating, and dynamic creation of the other, if needed
+    // having one set during initializing, and dynamic creation of the other, if needed
     //
     private double[] log10Likelihoods = null;
     private String likelihoodsAsString_PLs = null;
@@ -205,26 +205,26 @@ public final class GenotypeLikelihoods {
         return getLog10GQ(genotype,context.getAlleles());
     }
 
-    public static double getGQLog10FromLikelihoods(int iOfChoosenGenotype, double[] likelihoods){
+    public static double getGQLog10FromLikelihoods(int iOfChosenGenotype, double[] likelihoods){
         if(likelihoods == null)
             return Double.NEGATIVE_INFINITY;
 
         double qual = Double.NEGATIVE_INFINITY;
         for (int i=0; i < likelihoods.length; i++) {
-            if (i==iOfChoosenGenotype)
+            if (i==iOfChosenGenotype)
                 continue;
             if (likelihoods[i] >= qual)
                 qual = likelihoods[i];
         }
 
         // qual contains now max(likelihoods[k]) for all k != bestGTguess
-        qual = likelihoods[iOfChoosenGenotype] - qual;
+        qual = likelihoods[iOfChosenGenotype] - qual;
 
         if (qual < 0) {
             // QUAL can be negative if the chosen genotype is not the most likely one individually.
             // In this case, we compute the actual genotype probability and QUAL is the likelihood of it not being the chosen one
             double[] normalized = GeneralUtils.normalizeFromLog10(likelihoods);
-            double chosenGenotype = normalized[iOfChoosenGenotype];
+            double chosenGenotype = normalized[iOfChosenGenotype];
             return Math.log10(1.0 - chosenGenotype);
         } else {
             // invert the size, as this is the probability of making an error
@@ -513,7 +513,7 @@ public final class GenotypeLikelihoods {
          * (or set the next allele to ploidy - 1, ie the rightmost allele,  if D_a is empty).  In this case, all alleles to the left of the incremented allele
          * are reset to 0, and all alleles to the right are left unchanged.
          *
-         * The algorithm is initialized in thr constructor for PLIndex 0 with a list of P 0's and by setting the next allele to increment as ploidy - 1 (ie, the rightmost allele).
+         * The algorithm is initialized in the constructor for PLIndex 0 with a list of P 0's and by setting the next allele to increment as ploidy - 1 (ie, the rightmost allele).
          * @param PLIndex
          * @return
          */

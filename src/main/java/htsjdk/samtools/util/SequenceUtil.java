@@ -357,7 +357,7 @@ public class SequenceUtil {
     /**
      * Create a simple ungapped cigar string, which might have soft clipping at either end
      *
-     * @param alignmentStart raw aligment start, which may result in read hanging off beginning or end of read
+     * @param alignmentStart raw alignment start, which may result in read hanging off beginning or end of read
      * @return cigar string that may have S operator at beginning or end, and has M operator for the rest of the read
      */
     public static String makeCigarStringWithPossibleClipping(final int alignmentStart, final int readLength, final int referenceSequenceLength) {
@@ -930,7 +930,7 @@ public class SequenceUtil {
     }
 
     /**
-     * Convets the result of an md5Digest to a string
+     * Converts the result of an md5Digest to a string
      * @param digest digest that needs to be converted to a string
      * @return string representing the md5
      */
@@ -1073,7 +1073,7 @@ public class SequenceUtil {
 
     /**
      * Returns a read name from a FASTQ header string suitable for use in a SAM/BAM file.  Any letters after the first space are ignored.
-     * Ths method also strips trailing "/1" or "/2" so that paired end reads have the same name.
+     * This method also strips trailing "/1" or "/2" so that paired end reads have the same name.
      *
      * @param fastqHeader the header from a {@link htsjdk.samtools.fastq.FastqRecord}.
      * @return a read name appropriate for output in a SAM/BAM file.

@@ -29,18 +29,18 @@ public class VariantContextBuilderTest extends VariantBaseTest {
     }
 
     @Test(dataProvider = "trueFalse")
-    public void testAttributeResettingWorks(final boolean leaveModifyableAsIs) {
+    public void testAttributeResettingWorks(final boolean leaveModifiableAsIs) {
         final VariantContextBuilder root1 = new VariantContextBuilder(snpSource, snpChr, snpLocStart, snpLocStop, Arrays.asList(Aref, C));
         final VariantContextBuilder root2 = new VariantContextBuilder(snpSource, snpChr, snpLocStart, snpLocStop, Arrays.asList(Aref, C));
 
-        final VariantContext result1 = root1.attribute("AC", 1).make(leaveModifyableAsIs);
+        final VariantContext result1 = root1.attribute("AC", 1).make(leaveModifiableAsIs);
 
-        //this is a red-herring and should not change anything, however, if leaveModifyableAsIs is true, it does change result1.
-        final VariantContext ignored = root1.attribute("AC", 2).make(leaveModifyableAsIs);
+        //this is a red-herring and should not change anything, however, if leaveModifiableAsIs is true, it does change result1.
+        final VariantContext ignored = root1.attribute("AC", 2).make(leaveModifiableAsIs);
 
-        final VariantContext result2 = root2.attribute("AC", 1).make(leaveModifyableAsIs);
+        final VariantContext result2 = root2.attribute("AC", 1).make(leaveModifiableAsIs);
 
-        if (leaveModifyableAsIs) {
+        if (leaveModifiableAsIs) {
             Assert.assertNotSame(result1.getAttribute("AC"), result2.getAttribute("AC"));
         } else {
             Assert.assertEquals(result1.getAttribute("AC"), result2.getAttribute("AC"));

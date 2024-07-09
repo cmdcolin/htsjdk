@@ -638,8 +638,8 @@ public class VariantContextBuilder {
         return make(false);
     }
 
-    public VariantContext make(final boolean leaveModifyableAsIs) {
-        if (!leaveModifyableAsIs) {
+    public VariantContext make(final boolean leaveModifiableAsIs) {
+        if (!leaveModifiableAsIs) {
             attributesCanBeModified = false;
             filtersCanBeModified = false;
         }

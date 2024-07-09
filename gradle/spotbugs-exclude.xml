@@ -59,7 +59,7 @@
     </Match>
     <Match>
         <!-- It's OK for test classes to create one-off Random objects -->
-        <!-- This is done deliberately in SAMRecordSetBuilder in order to have a deterministic psuedo random result based on the input parameters -->
+        <!-- This is done deliberately in SAMRecordSetBuilder in order to have a deterministic pseudo random result based on the input parameters -->
         <!-- DMI: Random object created and used only once -->
         <!-- https://spotbugs.readthedocs.io/en/stable/bugDescriptions.html#dmi-random-object-created-and-used-only-once-dmi-random-used-only-once -->
         <Or>

@@ -250,7 +250,7 @@ public class IndexFactoryTest extends HtsjdkTest {
     @Test(dataProvider = "getRedirectFiles")
     public void testIndexRedirectedFiles(String input, IndexFactory.IndexType type) throws IOException {
         final VCFRedirectCodec codec = new VCFRedirectCodec();
-        final File dir = IOUtil.createTempDir("redirec-test.dir").toFile();
+        final File dir = IOUtil.createTempDir("redirect-test.dir").toFile();
         try {
             final File tmpInput = new File(dir, new File(input).getName());
             Files.copy(new File(input), tmpInput);

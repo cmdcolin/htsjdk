@@ -230,7 +230,7 @@ public final class SliceFactory {
                 if (coordinateSorted) {
                     return numberOfSAMRecords < minimumSingleReferenceSliceThreshold ?
                             ReferenceContext.MULTIPLE_REFERENCE_ID :
-                            ReferenceContext.UNINITIALIZED_REFERENCE_ID; // emit a small mutli-ref
+                            ReferenceContext.UNINITIALIZED_REFERENCE_ID; // emit a small multi-ref
                 } else {
                     // multi-ref, not coord sorted
                     return numberOfSAMRecords >= maxRecordsPerSlice ?

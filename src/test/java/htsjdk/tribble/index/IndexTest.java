@@ -78,7 +78,7 @@ public class IndexTest extends HtsjdkTest {
         };
     }
 
-    private final static OutputStream nullOutputStrem = new OutputStream() {
+    private final static OutputStream nullOutputStream = new OutputStream() {
         @Override
         public void write(int b) throws IOException { }
     };
@@ -102,7 +102,7 @@ public class IndexTest extends HtsjdkTest {
         Assert.assertEquals(loadedIndex.getSequenceNames(), index.getSequenceNames());
         Assert.assertEquals(loadedIndex.getProperties(), index.getProperties());
         // test that write to a stream does not blows ip
-        index.write(new LittleEndianOutputStream(nullOutputStrem));
+        index.write(new LittleEndianOutputStream(nullOutputStream));
     }
 
     @Test(dataProvider = "writeIndexData")

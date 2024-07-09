@@ -47,7 +47,7 @@ import java.util.List;
  * of related samples. Recently the format for storing next-generation read alignments has been
  * standardised by the SAM/BAM file format specification. This has significantly improved the
  * interoperability of next-generation tools for alignment, visualisation, and variant calling.
- * We propose the Variant Call Format (VCF) as a standarised format for storing the most prevalent
+ * We propose the Variant Call Format (VCF) as a standardised format for storing the most prevalent
  * types of sequence variation, including SNPs, indels and larger structural variants, together
  * with rich annotations. VCF is usually stored in a compressed manner and can be indexed for
  * fast data retrieval of variants from a range of positions on the reference genome.

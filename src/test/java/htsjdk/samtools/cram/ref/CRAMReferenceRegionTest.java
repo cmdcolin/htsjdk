@@ -228,7 +228,7 @@ public class CRAMReferenceRegionTest extends HtsjdkTest {
     }
 
     @Test(expectedExceptions = IllegalArgumentException.class)
-    public void testRequestedOffstBeyondEndOfContig() {
+    public void testRequestedOffsetBeyondEndOfContig() {
         final CRAMReferenceRegion cramReferenceRegion = getAlternatingReferenceRegion();
         cramReferenceRegion.fetchReferenceBasesByRegion(
                 CRAMStructureTestHelper.REFERENCE_SEQUENCE_ZERO,

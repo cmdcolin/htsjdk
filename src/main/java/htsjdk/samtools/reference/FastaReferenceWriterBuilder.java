@@ -36,7 +36,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 /**
- * Buider for a {@link htsjdk.samtools.reference.FastaReferenceWriter}
+ * Builder for a {@link htsjdk.samtools.reference.FastaReferenceWriter}
  * <p>
  * You can set each of the four outputs (fasta, dictionary and index, both gzi and fai) to a file or a stream.
  * by default if you provide a file to the fasta an accompanying set of indexes and dictionary will be created.

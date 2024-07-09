@@ -47,7 +47,7 @@ public class BAIEntry implements Comparable<BAIEntry> {
             final int landmarkIndex
     ) {
         // Note: a BAIEntry should never be made from a MULTI_REF reference context, because for a BAI index
-        // MUTLI_REF slices need to be resolved down to constituent BAIEntry for each reference context, including
+        // MULTI_REF slices need to be resolved down to constituent BAIEntry for each reference context, including
         // unmapped
         if (referenceContext.equals(ReferenceContext.MULTIPLE_REFERENCE_CONTEXT)) {
             throw new CRAMException("Attempt to create BAI entry from a multi ref context");

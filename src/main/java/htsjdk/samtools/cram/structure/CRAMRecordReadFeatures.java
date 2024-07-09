@@ -244,7 +244,7 @@ public class CRAMRecordReadFeatures {
     }
 
     /**
-     * Get a Cigar fo this set of read features.
+     * Get a Cigar of this set of read features.
      * @param readLength
      * @return
      */

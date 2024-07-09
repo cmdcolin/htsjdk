@@ -421,7 +421,7 @@ public class CRAMFileReader extends SamReader.ReaderImplementation implements Sa
         public DeferredCloseSeekableStream(final SeekableStream delegateStream) {
             this.delegateStream = delegateStream;
             if (delegateStream instanceof DeferredCloseSeekableStream) {
-                throw new IllegalArgumentException("ReuseableSeekableStream objects cannot be nested");
+                throw new IllegalArgumentException("ReusableSeekableStream objects cannot be nested");
             }
         }
 

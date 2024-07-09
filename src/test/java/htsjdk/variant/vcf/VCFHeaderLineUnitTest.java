@@ -40,7 +40,7 @@ public class VCFHeaderLineUnitTest extends VariantBaseTest {
     }
 
     @Test(expectedExceptions = { IllegalArgumentException.class }, expectedExceptionsMessageRegExp = "Invalid count number, with fixed count the number should be 1 or higher: .*")
-    public void testFormatNumberExeptions() {
+    public void testFormatNumberExceptions() {
         new VCFFormatHeaderLine("test",
                 0,
                 VCFHeaderLineType.Integer,
@@ -48,7 +48,7 @@ public class VCFHeaderLineUnitTest extends VariantBaseTest {
     }
 
     @Test(expectedExceptions = { IllegalArgumentException.class }, expectedExceptionsMessageRegExp = "Invalid count number, with fixed count the number should be 1 or higher: .*")
-    public void testInfoNumberExeptions() {
+    public void testInfoNumberExceptions() {
         new VCFInfoHeaderLine("test",
                 0,
                 VCFHeaderLineType.Integer,

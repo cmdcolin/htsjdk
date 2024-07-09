@@ -105,7 +105,7 @@ public class GZIIndexTest extends HtsjdkTest {
         final List<Object[]> data = new ArrayList<>(2 * index.getNumberOfBlocks() + 3);
         // position 0
         data.add(new Object[]{0, 0, 0, index});
-        // postion 10 bytes before the first index
+        // position 10 bytes before the first index
         final GZIIndex.IndexEntry firstFileEntry = index.getIndexEntries().get(0);
         data.add(new Object[]{firstFileEntry.getUncompressedOffset() - 10, 0, firstFileEntry.getUncompressedOffset() - 10, index});
 

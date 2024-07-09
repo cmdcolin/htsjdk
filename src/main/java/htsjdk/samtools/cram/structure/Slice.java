@@ -244,7 +244,7 @@ public class Slice {
         sliceBlocks = writer.writeToSliceBlocks(records, alignmentContext.getAlignmentStart());
 
         // we can't calculate the number of blocks until after the record writer has written everything out
-        nSliceBlocks = caclulateNumberOfBlocks();
+        nSliceBlocks = calculateNumberOfBlocks();
     }
 
     // May be null
@@ -519,7 +519,7 @@ public class Slice {
         }
      }
 
-    private int caclulateNumberOfBlocks() {
+    private int calculateNumberOfBlocks() {
         // Each Slice has 1 core data block, plus zero or more external data blocks.
         // Since an embedded reference block is just stored as an external block, it is included in
         // the external block count, and does not need to be counted separately.

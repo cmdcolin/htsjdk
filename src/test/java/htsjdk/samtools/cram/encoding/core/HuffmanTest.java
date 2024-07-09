@@ -54,7 +54,7 @@ public class HuffmanTest extends HtsjdkTest {
         final HuffmanParams<Integer> huffmanParams = new HuffmanParams(
                 Collections.singletonList(testSymbol),
                 Collections.singletonList(0));
-        final HuffmanCanoncialCodeGenerator<Integer> helper = new HuffmanCanoncialCodeGenerator(huffmanParams);
+        final HuffmanCanonicalCodeGenerator<Integer> helper = new HuffmanCanonicalCodeGenerator(huffmanParams);
         Assert.assertEquals(helper.getCanonicalCodeWords().size(), 1);
         Assert.assertEquals(helper.getCodeWordLenForValue(testSymbol), 0);
 
@@ -99,7 +99,7 @@ public class HuffmanTest extends HtsjdkTest {
     public void testVerySmallAlphabet(
             final Map<Byte, Integer> symbolFrequencies,
             final int maxExpectedCodeLength) throws IOException {
-        final HuffmanCanoncialCodeGenerator<Byte> huffmanHelper = doHuffmanTest(symbolFrequencies);
+        final HuffmanCanonicalCodeGenerator<Byte> huffmanHelper = doHuffmanTest(symbolFrequencies);
 
         // validate that the codewords all have a bitLength no longer than the maximum
         final List<HuffmanBitCode<Byte>> canonicalHuffmanCodeWords = huffmanHelper.getCanonicalCodeWords();
@@ -217,7 +217,7 @@ public class HuffmanTest extends HtsjdkTest {
         }
 
         final HuffmanParams<Integer> huffmanParams = huffmanCalculator.getHuffmanParams();
-        final HuffmanCanoncialCodeGenerator<Integer> codeWordGenerator = new HuffmanCanoncialCodeGenerator(huffmanParams);
+        final HuffmanCanonicalCodeGenerator<Integer> codeWordGenerator = new HuffmanCanonicalCodeGenerator(huffmanParams);
         final List<HuffmanBitCode<Integer>> codeWords = codeWordGenerator.getCanonicalCodeWords();
 
         for (final HuffmanBitCode<Integer> hc : codeWords) {
@@ -244,14 +244,14 @@ public class HuffmanTest extends HtsjdkTest {
         huffmanCalculator.getHuffmanParams();
     }
 
-    private static <T> HuffmanCanoncialCodeGenerator<T> doHuffmanTest(final Map<T, Integer> symbolFrequencies) throws IOException {
+    private static <T> HuffmanCanonicalCodeGenerator<T> doHuffmanTest(final Map<T, Integer> symbolFrequencies) throws IOException {
         final HuffmanParamsCalculator<T> huffmanCalculator = new HuffmanParamsCalculator();
         for (final Map.Entry<T, Integer> entry: symbolFrequencies.entrySet()) {
             huffmanCalculator.addSymbolObservations(entry.getKey(), entry.getValue());
         }
 
         final HuffmanParams<T> huffmanParams = huffmanCalculator.getHuffmanParams();
-        final HuffmanCanoncialCodeGenerator<T> helper = new HuffmanCanoncialCodeGenerator(huffmanParams);
+        final HuffmanCanonicalCodeGenerator<T> helper = new HuffmanCanonicalCodeGenerator(huffmanParams);
 
         // first, validate that the symbols with the most observations have the shortest codes
         int lastCodeLen = Integer.MAX_VALUE;

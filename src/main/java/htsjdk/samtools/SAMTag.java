@@ -91,7 +91,7 @@ public enum SAMTag {
     R2,
     RG,
     /**
-     * @deprecated use BC instead, for backwards compatibilty only
+     * @deprecated use BC instead, for backwards compatibility only
      */
     @Deprecated
     RT,

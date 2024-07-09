@@ -17,7 +17,7 @@
  */
 package htsjdk.samtools.cram.encoding.core;
 
-import htsjdk.samtools.cram.encoding.core.huffmanUtils.HuffmanCanoncialCodeGenerator;
+import htsjdk.samtools.cram.encoding.core.huffmanUtils.HuffmanCanonicalCodeGenerator;
 import htsjdk.samtools.cram.encoding.core.huffmanUtils.HuffmanParams;
 import htsjdk.samtools.cram.io.BitInputStream;
 import htsjdk.samtools.cram.io.BitOutputStream;
@@ -27,7 +27,7 @@ import htsjdk.samtools.cram.io.BitOutputStream;
  * https://en.wikipedia.org/wiki/Canonical_Huffman_code
  */
 final class CanonicalHuffmanByteCodec extends CoreCodec<Byte> {
-    private final HuffmanCanoncialCodeGenerator<Byte> helper;
+    private final HuffmanCanonicalCodeGenerator<Byte> helper;
 
     /**
      * Construct a Canonical Huffman Codec for Byte data
@@ -40,7 +40,7 @@ final class CanonicalHuffmanByteCodec extends CoreCodec<Byte> {
                                      final BitOutputStream coreBlockOutputStream,
                                      final HuffmanParams<Byte> huffmanParams) {
         super(coreBlockInputStream, coreBlockOutputStream);
-        helper = new HuffmanCanoncialCodeGenerator(huffmanParams);
+        helper = new HuffmanCanonicalCodeGenerator(huffmanParams);
     }
 
     @Override

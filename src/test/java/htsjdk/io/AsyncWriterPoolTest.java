@@ -107,7 +107,7 @@ public class AsyncWriterPoolTest extends HtsjdkTest {
         file.deleteOnExit();
         TestWriter writer = new TestWriter(file.toPath());
         Writer<String> pooledWriter = pool.pool(writer, new LinkedBlockingQueue<>(), 1); // NB: buffsize must be 1 to make tests work
-        writer.close(); // Close the inner writer so an exception will be thrown when a thread trys to write to it
+        writer.close(); // Close the inner writer so an exception will be thrown when a thread tries to write to it
         try {
             pooledWriter.write("Exception"); // Will trigger exception in writing thread
             pooledWriter.close(); // Will flush writer and check errors

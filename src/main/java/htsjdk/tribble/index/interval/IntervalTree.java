@@ -104,7 +104,7 @@ public class IntervalTree {
 
     /**
      * Return all intervals in tree.
-     * TODO: an iterator would be more effecient.
+     * TODO: an iterator would be more efficient.
      *
      * @return
      */

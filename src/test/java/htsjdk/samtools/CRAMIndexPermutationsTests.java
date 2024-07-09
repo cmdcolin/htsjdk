@@ -219,7 +219,7 @@ public class CRAMIndexPermutationsTests extends HtsjdkTest {
     public Object[][] getCRAMUnmappedOnlyTestCases() {
         return new Object[][]{
                 // since our test file has only 500 reads, only try the default or other encoding strategies that
-                // partition < 500 reads/slice; using larget slices wouldn't change the resulting cram
+                // partition < 500 reads/slice; using largest slices wouldn't change the resulting cram
                 {defaultStrategy10000x1},
                 {strategy500x2},
                 {strategy500x1},

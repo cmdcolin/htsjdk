@@ -79,7 +79,7 @@ public class VCFHeader implements HtsHeader, Serializable {
     private final Map<String, VCFHeaderLine> mOtherMetaData = new LinkedHashMap<String, VCFHeaderLine>();
     private final Map<String, VCFContigHeaderLine> contigMetaData = new LinkedHashMap<>();
 
-    // the list of auxillary tags
+    // the list of auxiliary tags
     private final List<String> mGenotypeSampleNames = new ArrayList<String>();
 
     // the character string that indicates meta data

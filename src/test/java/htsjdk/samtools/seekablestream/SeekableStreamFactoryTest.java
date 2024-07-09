@@ -41,7 +41,7 @@ public class SeekableStreamFactoryTest extends HtsjdkTest {
     }
 
 
-    // this test isn't particularly useful since we're not testing the meaninful case of having the http-nio provider
+    // this test isn't particularly useful since we're not testing the meaningful case of having the http-nio provider
     // installed
     @Test(dataProvider = "getSpecialCasePaths")
     public void testIsBeingHandledByLegacyUrlSupport(String path, boolean notExpected) {

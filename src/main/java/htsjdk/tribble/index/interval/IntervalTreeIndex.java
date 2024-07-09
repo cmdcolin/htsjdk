@@ -96,8 +96,8 @@ public class IntervalTreeIndex extends AbstractIndex {
         chrIdx.insert(interval);
     }
 
-    protected void setChrIndex(final List<ChrIndex> indicies) {
-        for (final ChrIndex index : indicies) {
+    protected void setChrIndex(final List<ChrIndex> indices) {
+        for (final ChrIndex index : indices) {
             chrIndices.put(index.getName(), index);
         }
     }

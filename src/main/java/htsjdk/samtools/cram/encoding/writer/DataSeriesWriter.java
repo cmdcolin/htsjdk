@@ -41,14 +41,14 @@ public class DataSeriesWriter<T> {
      * Initialize a Data Series writer
      *
      * @param valueType type of the data to write
-     * @param encodingDecriptor encoding-specific parameters
+     * @param encodingDescriptor encoding-specific parameters
      * @param sliceBlocksWriteStreams SliceBlocksWriteStreams
      */
     public DataSeriesWriter(final DataSeriesType valueType,
-                            final EncodingDescriptor encodingDecriptor,
+                            final EncodingDescriptor encodingDescriptor,
                             final SliceBlocksWriteStreams sliceBlocksWriteStreams) {
 
-        final CRAMEncoding<T> encoding = EncodingFactory.createCRAMEncoding(valueType, encodingDecriptor);
+        final CRAMEncoding<T> encoding = EncodingFactory.createCRAMEncoding(valueType, encodingDescriptor);
         this.codec = encoding.buildWriteCodec(sliceBlocksWriteStreams);
     }
 

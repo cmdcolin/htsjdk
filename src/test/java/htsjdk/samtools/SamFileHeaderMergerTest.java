@@ -112,7 +112,7 @@ public class SamFileHeaderMergerTest extends HtsjdkTest {
         assertEquals(totalCount, 1500);
         for (Integer i : seqCounts.keySet()) {
             if (i < 4 || i > 8) {
-                // seqeunce 5 - 9 should have 200 reads (indices 4 - 8)
+                // sequence 5 - 9 should have 200 reads (indices 4 - 8)
                 assertEquals(seqCounts.get(i).intValue(), 100);
             } else {
                 // the others should have 100

@@ -93,7 +93,7 @@ public class ReadsBundle<T extends IOPath> extends Bundle implements Serializabl
     /**
      * Get the optional {@link BundleResourceType#READS_INDEX} resource for this {@link ReadsBundle}.
      *
-     * @return the optional {@link BundleResourceType#READS_INDEX} resrouce for this {@link ReadsBundle},
+     * @return the optional {@link BundleResourceType#READS_INDEX} resource for this {@link ReadsBundle},
      * or Optional.empty if no index resource is present in the bundle.
      */
     public Optional<BundleResource> getIndex() {
@@ -195,7 +195,7 @@ public class ReadsBundle<T extends IOPath> extends Bundle implements Serializabl
 
     // Try to infer the contentType/format, i.e., READS/BAM from an IOPath. Currently this
     // exists purely to check for logical inconsistencies. It can detect cases that are illogical
-    // (an IOPath that has format CRAM, but file extension BAM), but it can't determinstically
+    // (an IOPath that has format CRAM, but file extension BAM), but it can't deterministically
     // and correctly infer the types in all cases without reproducing all the logic embedded in all the
     // codecs (i.e., an htsget IOPath ends in ".bam", but has format HTSGET_BAM, not BAM - detecting
     // that here would require parsing the entire IOPath structure, which is best left to the codecs

@@ -72,7 +72,7 @@ public final class BCF2Utils {
     /**
      * Create a strings dictionary from the VCF header
      *
-     * The dictionary is an ordered list of common VCF identifers (FILTER, INFO, and FORMAT)
+     * The dictionary is an ordered list of common VCF identifiers (FILTER, INFO, and FORMAT)
      * fields.
      *
      * Note that its critical that the list be dedupped and sorted in a consistent manner each time,

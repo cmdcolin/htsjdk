@@ -72,7 +72,7 @@ public class SRAAlignmentIterator implements CloseableIterator<SAMRecord> {
      * @param run opened read collection
      * @param header sam header
      * @param cachedReferences list of cached references shared among all iterators from a single SRAFileReader
-     * @param recordRangeInfo info about record ranges withing SRA archive
+     * @param recordRangeInfo info about record ranges within SRA archive
      * @param chunk used to determine which alignments the iterator should return
      */
     public SRAAlignmentIterator(SRAAccession accession, final ReadCollection run, final SAMFileHeader header, ReferenceCache cachedReferences,

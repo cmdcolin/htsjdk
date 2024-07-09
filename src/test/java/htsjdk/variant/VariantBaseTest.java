@@ -257,7 +257,7 @@ public class VariantBaseTest extends HtsjdkTest {
 
     /**
      * Asserts that the two provided attribute values are equal. If the values are Doubles, uses a
-     * more lenient comparision with a tolerance of 1e-2.
+     * more lenient comparison with a tolerance of 1e-2.
      *
      * @param key key for the attribute values
      * @param actual actual attribute value

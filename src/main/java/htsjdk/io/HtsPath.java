@@ -289,7 +289,7 @@ public class HtsPath implements IOPath, Serializable {
      * It's almost certainly an error on the users part instead of an atttempt to intentionally reference a file named
      * `file:///workingidr/ftp:/I forgot to encode this`
      *
-     * Note this is only meant to be called in the case of a URLSyntaxException already having occured during initial
+     * Note this is only meant to be called in the case of a URLSyntaxException already having occurred during initial
      * parsing of the URI
      *
      * @param pathString the path being examined

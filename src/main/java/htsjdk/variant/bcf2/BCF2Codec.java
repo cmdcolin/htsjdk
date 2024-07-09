@@ -153,7 +153,7 @@ public class BCF2Codec extends BinaryFeatureCodec<VariantContext> {
      * The default policy is to require an exact version match.
      * @param supportedVersion the current BCF implementation version
      * @param actualVersion the actual version
-     * @thows TribbleException if the version policy determines that {@code actualVersion} is not compatible
+     * @throws TribbleException if the version policy determines that {@code actualVersion} is not compatible
      * with {@code supportedVersion}
      */
     protected void validateVersionCompatibility(final BCFVersion supportedVersion, final BCFVersion actualVersion) {

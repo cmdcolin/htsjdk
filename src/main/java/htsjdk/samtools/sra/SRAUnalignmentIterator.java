@@ -65,7 +65,7 @@ public class SRAUnalignmentIterator implements Iterator<SAMRecord> {
      *
      * @param run opened read collection
      * @param header sam header
-     * @param recordRangeInfo info about record ranges withing SRA archive
+     * @param recordRangeInfo info about record ranges within SRA archive
      * @param chunk used to determine which unaligned reads the iterator should return
      */
     public SRAUnalignmentIterator(SRAAccession accession, final ReadCollection run, final SAMFileHeader header, SRAIterator.RecordRangeInfo recordRangeInfo, Chunk chunk) {

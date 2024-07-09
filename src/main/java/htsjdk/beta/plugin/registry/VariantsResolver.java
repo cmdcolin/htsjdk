@@ -151,7 +151,7 @@ public class VariantsResolver extends HtsCodecResolver<VariantsCodec> {
     /**
      * Get a {@link VariantsEncoder} suitable for encoding to {@code outputBundle} using {@code variantsEncoderOptions}.
      *
-     * @param outputBundle output bundle containg resources to encode to
+     * @param outputBundle output bundle containing resources to encode to
      * @param variantsEncoderOptions options to use
      * @return a {@link VariantsEncoder} suitable for encoding to {@code outputBundle}
      * @throws HtsjdkException if no registered codecs can handle the resource

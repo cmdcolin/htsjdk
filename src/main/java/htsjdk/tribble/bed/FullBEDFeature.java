@@ -80,7 +80,7 @@ public class FullBEDFeature extends SimpleBEDFeature implements BEDFeature {
         private int readingFrame = -1;
 
         /**
-         * Coding start position.  This is the leftmost position of the coding region, not neccessarily the 5'utr end
+         * Coding start position.  This is the leftmost position of the coding region, not necessarily the 5'utr end
          */
         private int codingStart;
         private int codingEnd;
@@ -229,7 +229,7 @@ public class FullBEDFeature extends SimpleBEDFeature implements BEDFeature {
         private int readingFrame = -1;
 
         /**
-         * Coding start position.  This is the leftmost position of the coding region, not neccessarily the 5'utr end
+         * Coding start position.  This is the leftmost position of the coding region, not necessarily the 5'utr end
          */
         private int start;
         private int end;

@@ -51,7 +51,7 @@ public class BAMRecord extends SAMRecord {
      * Records that have larger cigars will have their Cigars encoded to int[] and placed in the CG tag in the attributes (BAM only)
      * This should happen upon encoding. In place of the Cigar a sentinel value will be placed <READLENGTH>S<REFERENCELENGTH>N
      * <p>
-     * When a BAM record is decoded, the sentinel cigar informs of the existance of the CG tag, which is decoded and removed.
+     * When a BAM record is decoded, the sentinel cigar informs of the existence of the CG tag, which is decoded and removed.
      * The sentinel value is then replaced with the actual cigar (in memory).
      */
     public final static int MAX_CIGAR_OPERATORS = 0xffff;

@@ -83,7 +83,7 @@ public class AsyncWriterPool implements Closeable {
      * should wait when trying to place an item in the queue for writing. This timeout only comes into play if the
      * writer has failed and prevents a call to {@code write} from hanging.
      *
-     * @param timeoutSeconds the number of senconds a writer will wait to emplace an item in a queue for writing.
+     * @param timeoutSeconds the number of seconds a writer will wait to emplace an item in a queue for writing.
      */
     public void setTimeoutSeconds(int timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;

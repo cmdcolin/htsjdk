@@ -649,7 +649,7 @@ public final class FastaReferenceWriter implements AutoCloseable {
      * @param whereTo     the path to. must not be null.
      * @param makeIndex   whether the index file should be written at its standard location.
      * @param makeDict    whether the dictionary file should be written at it standard location.
-     * @param name        the sequence name, cannot contain white space, or control chracter or the header start character.
+     * @param name        the sequence name, cannot contain white space, or control character or the header start character.
      * @param description the sequence description, can be null or "" if no description.
      * @param bases       the sequence bases, cannot be {@code null}.
      * @throws IOException if such exception is thrown when writing in the output resources.
@@ -671,7 +671,7 @@ public final class FastaReferenceWriter implements AutoCloseable {
      * @param basesPerLine number of bases per line. must be 1 or greater.
      * @param makeIndex    whether the index file should be written at its standard location.
      * @param makeDict     whether the dictionary file should be written at it standard location.
-     * @param name         the sequence name, cannot contain white space, or control chracter or the header start character.
+     * @param name         the sequence name, cannot contain white space, or control character or the header start character.
      * @param description  the sequence description, can be null or "" if no description.
      * @param bases        the sequence bases, cannot be {@code null}.
      * @throws IOException if such exception is thrown when writing in the output resources.

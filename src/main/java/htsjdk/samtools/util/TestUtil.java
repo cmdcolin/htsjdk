@@ -61,7 +61,7 @@ public class TestUtil {
      * @deprecated Use properly spelled method. {@link #getTempDirectory}
      */
     @Deprecated
-    public static File getTempDirecory(final String prefix, final String suffix) {
+    public static File getTempDirectory(final String prefix, final String suffix) {
         return getTempDirectory(prefix, suffix);
     }
 

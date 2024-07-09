@@ -354,7 +354,7 @@ public class FastaReferenceWriterTest extends HtsjdkTest {
                 fastaReferenceWriter.addSequence(referenceSequence);
             }
         }
-        // Can't compare files directly since discription isn't read by ReferenceSequenceFile and so it isn't written to new fasta.
+        // Can't compare files directly since description isn't read by ReferenceSequenceFile and so it isn't written to new fasta.
         final SAMSequenceDictionary testDictionary = SAMSequenceDictionaryExtractor.extractDictionary(testDictOutputFile);
         assertFastaContent(testOutputFile, false, testDictionary, basesPerLine, seqs, new CollectionUtil.DefaultingMap<String, Integer>(k -> -1, false), false);
         assertFastaIndexContent(testOutputFile, testIndexOutputFile, testDictionary, seqs);

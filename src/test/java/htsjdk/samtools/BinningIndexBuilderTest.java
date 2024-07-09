@@ -12,36 +12,36 @@ import java.util.List;
 
 public class BinningIndexBuilderTest extends HtsjdkTest {
 
-    private final static int REFERNCE_SEQUENCE_INDEX = 19;
+    private final static int REFERENCE_SEQUENCE_INDEX = 19;
 
     @DataProvider(name="BinningFeatures")
     public Object[][] getBinningFeatures() {
         return new Object[][]{
                 { // single feature in first bin at offset 0
                     Collections.singletonList(
-                        new MockIndexableFeature(REFERNCE_SEQUENCE_INDEX, 1, 10, 0, 25)),
+                        new MockIndexableFeature(REFERENCE_SEQUENCE_INDEX, 1, 10, 0, 25)),
                     Collections.singletonList( new Chunk(0, 25)),
                     new long[] { 0L }
                 },
                 { // single feature in first bin at non-zero offset
                     Collections.singletonList(
-                            new MockIndexableFeature(REFERNCE_SEQUENCE_INDEX, 1, 10, 100, 125)),
+                            new MockIndexableFeature(REFERENCE_SEQUENCE_INDEX, 1, 10, 100, 125)),
                     Collections.singletonList( new Chunk(100, 125)),
                     new long[] { 100L }
                 },
                 { // two features spanning two bins at non-zero offsets
                     Arrays.asList(
-                            new MockIndexableFeature(REFERNCE_SEQUENCE_INDEX, 2, 13, 100, 125),
-                            new MockIndexableFeature(REFERNCE_SEQUENCE_INDEX, 22222, 22223, 22222, 22225)),
+                            new MockIndexableFeature(REFERENCE_SEQUENCE_INDEX, 2, 13, 100, 125),
+                            new MockIndexableFeature(REFERENCE_SEQUENCE_INDEX, 22222, 22223, 22222, 22225)),
                     Arrays.asList(new Chunk(100, 125), new Chunk(22222, 22225)),
                     new long[] {100L, 22222L }
                 },
                 { // two features in first bin, one at offset 0, plus one feature in the second bin
                   // https://github.com/samtools/htsjdk/issues/943
                     Arrays.asList(
-                        new MockIndexableFeature(REFERNCE_SEQUENCE_INDEX, 1, 10, 0, 25),
-                        new MockIndexableFeature(REFERNCE_SEQUENCE_INDEX, 2, 13, 100, 125),
-                        new MockIndexableFeature(REFERNCE_SEQUENCE_INDEX, 22222, 22223, 22222, 22225)),
+                        new MockIndexableFeature(REFERENCE_SEQUENCE_INDEX, 1, 10, 0, 25),
+                        new MockIndexableFeature(REFERENCE_SEQUENCE_INDEX, 2, 13, 100, 125),
+                        new MockIndexableFeature(REFERENCE_SEQUENCE_INDEX, 22222, 22223, 22222, 22225)),
                     Arrays.asList(new Chunk(0, 125), new Chunk(22222, 22225)),
                     new long[] {0L, 22222L }
                 }
@@ -55,7 +55,7 @@ public class BinningIndexBuilderTest extends HtsjdkTest {
             final long[] expectedBins)
     {
         // use a sequence length that spans at least two (16k) binning blocks
-        final BinningIndexBuilder bib = new BinningIndexBuilder(REFERNCE_SEQUENCE_INDEX, 40000);
+        final BinningIndexBuilder bib = new BinningIndexBuilder(REFERENCE_SEQUENCE_INDEX, 40000);
 
         mockFeatures.forEach(bib::processFeature);
 

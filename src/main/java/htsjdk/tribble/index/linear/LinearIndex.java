@@ -413,7 +413,7 @@ public class LinearIndex extends AbstractIndex {
     }
 
     /**
-     * Adapative optimization of the linear index
+     * Adaptive optimization of the linear index
      * @param threshold threshold to use for optimizing each constituent {@code chrIndex}
      * @return The new optimized index
      */

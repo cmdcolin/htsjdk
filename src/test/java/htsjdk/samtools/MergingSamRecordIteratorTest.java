@@ -162,7 +162,7 @@ public class MergingSamRecordIteratorTest extends HtsjdkTest {
 
         int i = 0;
 
-        // With unsorted option there is no garantee that order of the names to come back from the iterator
+        // With unsorted option there is no guarantee that order of the names to come back from the iterator
         final String[] readNames = {"b", "a", "d", "e", "c"};
 
         while (iterator.hasNext()) {

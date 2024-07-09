@@ -153,7 +153,7 @@ public abstract class AbstractIndex implements MutableIndex {
      * create an abstract index, with defaults for the version value, and empty properties and chromosome lists
      */
     public AbstractIndex() {
-        this.version = VERSION; // <= is overriden when file is read
+        this.version = VERSION; // <= is overridden when file is read
         this.properties = new LinkedHashMap<String, String>();
         chrIndices = new LinkedHashMap<String, ChrIndex>();
     }

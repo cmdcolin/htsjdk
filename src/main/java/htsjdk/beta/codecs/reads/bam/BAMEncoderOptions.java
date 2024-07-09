@@ -13,14 +13,14 @@ import htsjdk.utils.ValidationUtils;
  * Encoder options specific to BAM encoders.
  */
 public class BAMEncoderOptions {
-    public static final int DEAFULT_MAX_RECORDS_IN_RAM = 500000;
+    public static final int DEFAULT_MAX_RECORDS_IN_RAM = 500000;
 
     private int outputBufferSize                = Defaults.BUFFER_SIZE;
     private boolean asyncIO                     = Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS;
     private int asyncOutputBufferSize           = AbstractAsyncWriter.DEFAULT_QUEUE_SIZE;
     private IOPath tempDirPath                  = new HtsPath(IOUtil.getDefaultTmpDirPath().toString());
     private int compressionLevel                = BlockCompressedOutputStream.getDefaultCompressionLevel();
-    private Integer maxRecordsInRAM             = DEAFULT_MAX_RECORDS_IN_RAM;
+    private Integer maxRecordsInRAM             = DEFAULT_MAX_RECORDS_IN_RAM;
     private DeflaterFactory deflaterFactory     = BlockCompressedOutputStream.getDefaultDeflaterFactory();
     // SAM only ?:   private SamFlagField samFlagFieldOutput = SamFlagField.NONE;
 
@@ -147,7 +147,7 @@ public class BAMEncoderOptions {
      * file handles. The RAM available to the JVM may need to be increased in order to hold the specified
      * number of records in RAM.
      *
-     * Defaults value is {@link BAMEncoderOptions#DEAFULT_MAX_RECORDS_IN_RAM}.
+     * Defaults value is {@link BAMEncoderOptions#DEFAULT_MAX_RECORDS_IN_RAM}.
      *
      * @return the maximum records kept in ram before spilling to disk for these options
      */
@@ -162,7 +162,7 @@ public class BAMEncoderOptions {
      * file handles. The RAM available to the JVM may need to be increased in order to hold the specified
      * number of records in RAM.
      *
-     * Defaults value is {@link BAMEncoderOptions#DEAFULT_MAX_RECORDS_IN_RAM}.
+     * Defaults value is {@link BAMEncoderOptions#DEFAULT_MAX_RECORDS_IN_RAM}.
      *
      * @param maxRecordsInRAM the maximum records kept in ram before spilling to disk. may be null.
      * @return updated options

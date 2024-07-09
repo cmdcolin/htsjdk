@@ -50,7 +50,7 @@ import java.util.TreeMap;
 import java.util.regex.Pattern;
 
 /**
- * Utilty methods.
+ * Utility methods.
  */
 public final class SAMUtils {
     /**
@@ -346,7 +346,7 @@ public final class SAMUtils {
      * <p/>
      * Equivalent to phredToFastq(data, 0, data.length)
      *
-     * @param data Array of bytes in which each byte is a binar phred score.
+     * @param data Array of bytes in which each byte is a binary phred score.
      * @return String with ASCII representation of those quality scores.
      */
     public static String phredToFastq(final byte[] data) {
@@ -360,7 +360,7 @@ public final class SAMUtils {
      * Convert an array of bytes, in which each byte is a binary phred quality score, to
      * printable ASCII representation of the quality scores, ala FASTQ format.
      *
-     * @param buffer Array of bytes in which each byte is a binar phred score.
+     * @param buffer Array of bytes in which each byte is a binary phred score.
      * @param offset Where in buffer to start conversion.
      * @param length How many bytes of buffer to convert.
      * @return String with ASCII representation of those quality scores.

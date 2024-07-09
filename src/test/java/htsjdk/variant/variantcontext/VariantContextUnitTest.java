@@ -1417,7 +1417,7 @@ public class VariantContextUnitTest extends VariantBaseTest {
         final VariantContext vcACNoGtSetTwoAlts =
                 createValidateChromosomeCountsContext(Arrays.asList(Aref, T, C), attributesACNoGtTwoAlts, (Genotype[]) null);
 
-        // with AF set, and two different ALTs (T and C), with GT of 1/2, we expect two frequncy values.
+        // with AF set, and two different ALTs (T and C), with GT of 1/2, we expect two frequency values.
         // With two ALTs, a list is expected, so we set the attribute as a list of 0.5,0.5
         final Map<String, Object> attributesAFTwoAlts = new HashMap<>();
         attributesAFTwoAlts.put(VCFConstants.ALLELE_FREQUENCY_KEY, Arrays.asList("0.5", "0.5"));

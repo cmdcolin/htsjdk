@@ -37,7 +37,7 @@ public class VCFFileReaderTest extends HtsjdkTest {
     }
 
     @Test(dataProvider = "queryableData")
-    public void testIsQueriable(final File vcf, final boolean expectedQueryable) throws Exception {
+    public void testIsQueryable(final File vcf, final boolean expectedQueryable) throws Exception {
         Assert.assertEquals(new VCFFileReader(vcf, false).isQueryable(), expectedQueryable);
     }
 

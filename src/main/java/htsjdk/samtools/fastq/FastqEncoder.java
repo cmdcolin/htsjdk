@@ -113,7 +113,7 @@ public final class FastqEncoder {
      *
      * @param record    object to encode.
      * @param header    header for the returned object.
-     * @param custom    function to customize encoding. Note that default information might be overriden.
+     * @param custom    function to customize encoding. Note that default information might be overridden.
      */
     public static SAMRecord asSAMRecord(final FastqRecord record, final SAMFileHeader header, final BiConsumer<FastqRecord, SAMRecord> custom) {
         // construct the SAMRecord and set the unmapped flag

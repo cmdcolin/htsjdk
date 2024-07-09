@@ -98,7 +98,7 @@ public class IntervalListCodecTest extends HtsjdkTest {
             IOUtil.copyStream(fis,bgz);
             bgz.flush();
         }
-        //test dictonary can be extracted
+        //test dictionary can be extracted
         Assert.assertNotNull(SAMSequenceDictionaryExtractor.extractDictionary(tmpGz));
         testTribbleDecode(tmpGz);
         tmpGz.delete();

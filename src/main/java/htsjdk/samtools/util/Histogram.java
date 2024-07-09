@@ -198,7 +198,7 @@ public final class Histogram<K extends Comparable> implements Serializable {
     }
 
     /**
-     * Returns the sum of the products of the histgram bin ids and the number of entries in each bin.
+     * Returns the sum of the products of the histogram bin ids and the number of entries in each bin.
      * Note: This is only supported if this histogram stores instances of Number.
      */
     public double getSum() {

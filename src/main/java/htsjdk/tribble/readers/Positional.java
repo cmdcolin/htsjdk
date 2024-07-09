@@ -43,7 +43,7 @@ public interface Positional extends LocationAware {
     /**
      * Skip the next nBytes in the stream.
      * @param nBytes to skip, must be >= 0
-     * @return the number of bytes actually skippped.
+     * @return the number of bytes actually skipped.
      * @throws IOException
      */
     public long skip(long nBytes) throws IOException;

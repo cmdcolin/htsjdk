@@ -115,7 +115,7 @@ public final class LittleEndianOutputStream extends FilterOutputStream {
         return written;
     }
 
-    // Method provide to enable "reseting" to a previous state.
+    // Method provide to enable "resetting" to a previous state.
     public void setWrittenCount(long count) {
         this.written = count;
     }

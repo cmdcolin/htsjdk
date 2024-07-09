@@ -63,7 +63,7 @@ public class BlockCompressedInputStreamTest extends HtsjdkTest {
 		Assert.assertEquals(endOfBlockTrue, offsets);
 	}
 	@Test
-    public void decompression_should_cross_block_boundries() throws Exception {
+    public void decompression_should_cross_block_boundaries() throws Exception {
 		byte[] uncompressed = Files.readAllBytes(BLOCK_UNCOMPRESSED.toPath());
 		try (BlockCompressedInputStream stream = new BlockCompressedInputStream(new FileInputStream(BLOCK_COMPRESSED))) {
 			byte[] decompressed = new byte[uncompressed.length]; 

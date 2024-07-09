@@ -38,7 +38,7 @@ import java.util.Map;
  *
  * <ul>
  * <li> a sample name, must be a non-null string</li>
- * <li> an ordered list of alleles, intrepreted as the genotype of the sample,
+ * <li> an ordered list of alleles, interpreted as the genotype of the sample,
  *    each allele for each chromosome given in order.  If alleles = [a*, t]
  *    then the sample is a/t, with a (the reference from the *) the first
  *    chromosome and t on the second chromosome</li>
@@ -116,7 +116,7 @@ public final class FastGenotype extends Genotype {
 
     // ---------------------------------------------------------------------------------------------------------
     //
-    // Implmenting the abstract methods
+    // Implementing the abstract methods
     //
     // ---------------------------------------------------------------------------------------------------------
 
